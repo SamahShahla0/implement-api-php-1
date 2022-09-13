@@ -8,7 +8,7 @@ $christmasDay = strtotime('25 December');
 $days = ($christmasDay - $current_date)/60/60/24;
 
 $result =[
-    "Number of days left until christmas" => $days
+    "Number of days left until christmas" => round($days)
 ];
 
 echo json_encode($result);

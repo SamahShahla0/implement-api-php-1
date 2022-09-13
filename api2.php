@@ -1,17 +1,18 @@
 <?php
 
-$a = $_POST['a'];
-$b = $_POST['b'];
-$c = $_POST['c'];
-$expression  = -1;
-
-
-$a = 1;
-$b = 2;
-$c = 3;
+$a = $_POST["a"];
+$b = $_POST["b"];
+$c = $_POST["c"];
 
 //a^3 + b*c - a/b.
+$expression = ($a**3) + ($b*$c) - ($a / $b);
+$result = [
+    "a" => $a,
+    "b" => $b,
+    "c" => $c,
+    "expression" => $expression
+];
 
-echo ($expression) ;
+echo json_encode($result);
 
 ?> 

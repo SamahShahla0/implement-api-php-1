@@ -1,7 +1,7 @@
 <?php
 
 $to_check = $_GET['to_check'];
-$palindrome = $_GET['palindrome'];
+$palindrome = false;
 
 function Palindrome($string){ 
     if (strrev($string) == $string){ 
@@ -13,10 +13,10 @@ function Palindrome($string){
 } 
  
 if(Palindrome($to_check)){ 
-    $palindrome = "true";
+    $palindrome = true;
 }
 else { 
-    $palindrome = "false"
+    $palindrome = false;
 }
 
 $results = [
